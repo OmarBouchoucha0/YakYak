@@ -1,18 +1,13 @@
-"use client"
-import { Toaster } from "@/components/ui/sonner"
-
-export default function RootLayout({
+export default function RoomLayout({
     children,
-}: Readonly<{
-    children: React.ReactNode;
-}>) {
+}: {
+    children: React.ReactNode
+}) {
     return (
-        <html lang="en">
-            <head />
-            <body >
+        <div className="h-screen w-screen p-4 box-border">
+            <main className="flex flex-col h-full w-full border rounded-xl overflow-hidden">
                 {children}
-                <Toaster />
-            </body>
-        </html>
+            </main>
+        </div>
     )
 }

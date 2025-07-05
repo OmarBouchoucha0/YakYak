@@ -9,7 +9,7 @@ export default function MeetUI() {
     const [roomId, setRoomId] = useState("")
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-background p-4">
+        <div className="min-h-screen flex items-center justify-center bg-background h-full w-full">
             <div className="w-full max-w-sm space-y-6 border rounded-xl p-10">
                 {/* Logo */}
                 <div className="flex flex-col items-center gap-4 ">

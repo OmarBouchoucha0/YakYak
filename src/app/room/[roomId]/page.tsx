@@ -24,10 +24,9 @@ export default function RoomPage() {
     };
 
     return (
-        <div className="flex flex-col h-full w-full  bg-background border
-            rounded-xl">
-            {/* Header with room ID */}
-            <header className="flex justify-between items-center p-4 border-b">
+        <div className="flex flex-col h-full">
+            {/* Header with room ID - fixed height */}
+            <header className="flex justify-between items-center p-4 border-b shrink-0">
                 <h1 className="text-xl font-semibold">Voice Room</h1>
                 <Button
                     variant="outline"
@@ -40,18 +39,15 @@ export default function RoomPage() {
             </header>
 
             {/* Main content area */}
-            <div className="flex-1 p-4 overflow-auto">
-                <div className="grid grid-cols-1  gap-4 w-full h-full
-">
-                    {/* Participant cards would go here */}
-                    <div className="bg-card rounded-lg p-4 border                         ">
+            <div className="flex-1 p-4 overflow-auto ">
+                <div className="grid grid-cols-1  gap-4 w-full h-full">
+                    <div className="bg-card rounded-lg p-4 border flex items-center justify-center">
                         <p className="font-medium">You</p>
                     </div>
                 </div>
             </div>
 
-            {/* Control dock */}
-            <footer className="p-4 border-t">
+            <footer className="p-4 border-t shrink-0">
                 <div className="flex justify-center gap-4">
                     <Button
                         variant={isMuted ? 'destructive' : 'outline'}
